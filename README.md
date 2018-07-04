@@ -18,7 +18,7 @@ DAZ Studioのスクリプト機能は、日本語の情報がほとんど無く�
 またソース中に日本語が書かれているサンプルも無いため、とてもとっつきにくいものになっています。<br/>
 このプロジェクトが一助になればと思っています。
 
-DAZ Studioのスクリプト機能の開発についての記事も書いています。
+DAZ Studioのスクリプト開発についての記事も書いています。
 
 [DAZ Script開発環境の構築方法[DAZ Studio]]<br/>
 https://qiita.com/lowpolysnow/items/1cb0ab1315a95fae5d6d
