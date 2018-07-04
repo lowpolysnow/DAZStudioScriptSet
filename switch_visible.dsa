@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////////////////////////
+// 実行のたびに、選択オブジェクトとその配下を表示／非表示　切り替え
+//  https://www.daz3d.com/forums/discussion/59174/hide-multiple-nodes-at-once
+//  を改造
+//////////////////////////////////////////////////////////////////////
+
+//現在の選択オブジェクトを取得。
+//取得できなかったときは終了。
+var startNodes = Scene.getSelectedNodeList();
+if ( startNodes ) {
+ var bNewVisibility;
+ var nodes = new Array();
+
+ //自身をnodesに入れる。
+ //その後、子ノードも配列として格納していく。
+ //Sceneタブのより上位に表示されているものを優先。
+ for ( var snodes = 0 ; snodes < startNodes.length ; snodes++ ){
+  nodes = nodes.concat( startNodes[snodes] );
+ }
+ for ( var snodesc = 0 ; snodesc < startNodes.length ; snodesc++ ){
+  nodes = nodes.concat( startNodes[snodesc].getNodeChildren( true ) );
+ }
+
+ //現在の選択オブジェクトの表示状態を取得。
+ //これを反転させて、自分と配下のオブジェクトに適用。
+ if ( startNodes[0].isVisible() ) {
+  bNewVisibility = false;
+ } else {
+  bNewVisibility = true;
+ }
+ 
+ //配下のオブジェクトに適用
+ for ( var n = 0 ; n < nodes.length ; n++ ) {
+  nodes[ n ].setVisible( bNewVisibility );
+ }
+}
+
