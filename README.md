@@ -44,12 +44,12 @@ PoseをFigureへ適用する時、下記のようにLimit設定を解除する�
 
 ![説明2](https://github.com/lowpolysnow/DAZStudioScriptSet/blob/images/LimitList_4.png "説明2")
 
-また、Hidden設定になっているNodeやPropertyは取得していません。
+また、Hidden設定になっているNodeやPropertyは取得していません。  
 そのため、DAZ Studio上の見た目そのままの設定値の確認ができると思います。
 
 ### TypeScript版
 
-このスクリプトはTypeScriptで書いた後、DAZ Scriptへ変換しています。
+このスクリプトはTypeScriptで書いた後、DAZ Scriptへ変換しています。  
 変換前のTypeScriptのソースはtsフォルダに格納しています。
 
 
